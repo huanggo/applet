@@ -1,0 +1,74 @@
+<import src="../../utils/template/footer.wxml"/>
+<view class="top">
+<view class="sele">
+
+  
+      <navigator class="sele-1">
+      热点
+    </navigator>
+    <navigator class="sele-2">
+     关注
+    </navigator>
+ 
+</view>
+
+<view class="nav">
+    <view bindtap="handleChange" hover hover-class="navActive" data-index="0" class="nav-t1 {{navIndex==0?'nav-active':''}}">宠物现场</view>
+     <view bindtap="handleChange" hover hover-class="navActive" data-index="1" class="nav-t2 {{navIndex==1?'nav-active':''}}">宠物生活</view>
+    <view bindtap="handleChange" hover hover-class="navActive" data-index="2" class="nav-t3 {{navIndex==2?'nav-active':''}}">萌萌哒</view>
+</view>
+
+</view>
+
+<view class="main">
+    
+        <swiper style="height:750px" bindchange="swiperChange"current="{{navIndex}}">
+              <block>
+            <swiper-item >
+        <scroll-view scroll-y="true"style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+   
+           
+                 <view class="main-img"wx:for="{{lists}}" wx:key="{{index}}">
+            <image style="width:360rpx;height:368rpx;" src="{{item.img}}"></image>
+              <view class="main-txt">{{item.title}}</view>
+        </view>
+        </scroll-view>
+       </swiper-item >
+           
+         </block>
+         <!--足球生活-->
+           <block>
+            <swiper-item >
+            <scroll-view scroll-y="true"style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+                 <view class="main-img"wx:for="{{lists}}" wx:key="{{index}}">
+            <image style="width:360rpx;height:368rpx;" src="{{item.img}}"></image>
+              <view class="main-txt">{{item.title}}</view>
+        </view>
+        </scroll-view>
+            </swiper-item >
+
+         </block>
+         <!--足球美女-->
+           <block>
+            <swiper-item >
+            <scroll-view scroll-y="true"style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+                 <view class="main-img"wx:for="{{lists}}" wx:key="{{index}}">
+            <image style="width:360rpx;height:368rpx;" src="{{item.img}}"></image>
+              <view class="main-txt">{{item.title}}</view>
+        </view>
+        </scroll-view>
+            </swiper-item >
+
+         </block>
+ 
+        </swiper>
+        
+   
+    <!--<view class="add">
+            加载更多
+         </view>-->
+</view>
+
+<template is="footer">
+
+</template>

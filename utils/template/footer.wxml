@@ -1,0 +1,36 @@
+
+<template name="footer">
+<view class="footer-btn">
+   <navigator url="url" class="footer-main">
+     <view class="footer-btn1" style="margin-left:0;">
+       <image class="img" src="../../imgs/index.svg"></image>
+       <view class="txt2">首页</view>
+     </view>
+    </navigator> 
+
+     <navigator url="url" class="footer-main">
+      <view class="footer-btn1">
+       <image class="img" src="../../imgs/fa.svg"></image>
+       <view class="txt2">发现</view>
+     </view>
+     </navigator> 
+     <navigator url="url" class="footer-main">
+      <view class="footer-btn1 ps">
+       <image class="img rem" src="../../imgs/ph.svg"></image>
+      
+     </view>
+     </navigator>
+      <navigator url="url" class="footer-main">
+      <view class="footer-btn1">
+       <image class="img" src="../../imgs/wo.svg"></image>
+       <view class="txt2">我的</view>
+     </view>
+     </navigator>
+       <navigator url="url" class="footer-main">
+      <view class="footer-btn1">
+       <image class="img" src="../../imgs/tui.svg"></image>
+       <view class="txt2">退出</view>
+     </view>
+   </navigator>
+</view>
+</template>

@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="">
+  
+   <text>{{userName}}</text>
+   <button catchtap="viewTap"> click me </button>
+   <text hidden="{{show}}">hidden--{{msg}}</text>
+   <text wx:if="{{show}}">{{userName}}</text>
+   <text wx:elif="{{show}}"> 2 </text>
+   <text wx:else>3</text>
+
+   <view wx:for="{{array}}"  wx:for-index="idx" wx:for-item="i" wx:key="{{idx}}">
+      {{idx}}: {{i.msg}}
+   </view>
+   <template is="user" data="{{...item}}"></template>
+
+   <view class="setion" hover="true" hover-class="sec-hover" >
+       我是超人
+   </view>
+   <scroll-view scroll-y="true"style="height: 100px;"bindscroll="scroll">
+      <view class="wei">
+         无敌十多我
+      </view>
+      <view class="wei">
+         无敌十多我
+      </view>
+      <view class="wei">
+         无敌十多我
+      </view>
+      <view class="wei">
+         无敌十多我
+      </view>
+      <view class="wei">
+         无敌十多我
+      </view>
+   </scroll-view>
+
+   <radio-group bindchange="radioChange">
+   
+   <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+     
+   </radio-group>
+</view>
